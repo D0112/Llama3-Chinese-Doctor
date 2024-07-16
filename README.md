@@ -84,3 +84,20 @@ conda create -n envName python==3.11
   ```
   ./llama-cli -m ./models/mymodel/ggml-model-Q4_K_M.gguf -n 128
   ```
+## 部署
+- 使用ollama
+  - https://github.com/ollama/ollama
+  - Linux
+  ```
+  curl -fsSL https://ollama.com/install.sh | sh
+  ```
+  - 导入GGUF模型
+  ```
+  FROM ./vicuna-33b.Q4_0.gguf
+  ollama create example -f Modelfile
+  ollama run example
+  ```
+  - web_demo
+  ```
+  streamlit run app.py
+  ```
