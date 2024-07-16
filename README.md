@@ -54,4 +54,33 @@ conda create -n envName python==3.11
   ```
   llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
   ```
-  
+  - 可视化
+  ```
+  llamafactory-cli webui
+  ```
+## 量化
+- 使用llama.cpp
+  - https://github.com/ggerganov/llama.cpp
+  ```
+  git clone https://github.com/ggerganov/llama.cpp
+  cd llama.cpp
+  make
+  cmake -B build
+  cmake --build build --config Release
+  ```
+  - 安装依赖
+  ```
+  python3 -m pip install -r requirements.txt
+  ```
+  - 将模型转换为可量化的格式
+  ```
+  python3 convert_hf_to_gguf.py models/mymodel/
+  ```
+  - 量化
+  ```
+  ./llama-quantize ./models/mymodel/ggml-model-f16.gguf ./models/mymodel/ggml-model-Q4_K_M.gguf Q4_K_M
+  ```
+  - 推理模型
+  ```
+  ./llama-cli -m ./models/mymodel/ggml-model-Q4_K_M.gguf -n 128
+  ```
