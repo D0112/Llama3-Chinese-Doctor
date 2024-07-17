@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-gguf.dir/gguf.cpp.o -o ../../bin/llama-gguf  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../../ggml/src/libggml.so 
