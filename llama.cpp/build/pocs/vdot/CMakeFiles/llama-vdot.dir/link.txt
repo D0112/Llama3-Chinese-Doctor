@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-vdot.dir/vdot.cpp.o -o ../../bin/llama-vdot  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/src:/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src ../../common/libcommon.a ../../src/libllama.so ../../ggml/src/libggml.so 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libllama.so -o libllama.so CMakeFiles/llama.dir/llama.cpp.o CMakeFiles/llama.dir/unicode.cpp.o CMakeFiles/llama.dir/unicode-data.cpp.o  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../ggml/src/libggml.so 
