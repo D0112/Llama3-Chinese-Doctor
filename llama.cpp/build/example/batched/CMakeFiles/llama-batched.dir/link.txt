@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-batched.dir/batched.cpp.o -o ../../bin/llama-batched  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/src:/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../../common/libcommon.a ../../src/libllama.so ../../ggml/src/libggml.so 
