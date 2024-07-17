@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-gguf-split.dir/gguf-split.cpp.o -o ../../bin/llama-gguf-split  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/src:/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../../common/libcommon.a ../../src/libllama.so ../../ggml/src/libggml.so 

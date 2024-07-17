@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-imatrix.dir/imatrix.cpp.o -o ../../bin/llama-imatrix  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/src:/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../../common/libcommon.a ../../src/libllama.so ../../ggml/src/libggml.so 
