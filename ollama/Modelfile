@@ -1,0 +1,21 @@
+FROM /home/adminn/Desktop/LLAMA3/quantize/models/Publisher/Repository/llama3-8B.gguf
+ 
+TEMPLATE """{{- if .System }}
+	<|system|>
+	{{ .System }}
+	{{- end }}
+	<|user|>
+	{{ .Prompt }}
+	<|assistant|>
+"""
+ 
+SYSTEM """你是一个乐于助人、聪明、善良、高效的人工智能助手。你的名字叫艾拉。你总是尽你所能满足用户的要求。"""
+ 
+ 
+PARAMETER temperature 0.8
+PARAMETER num_ctx 8192
+PARAMETER stop "<|system|>"
+PARAMETER stop "<|user|>"
+PARAMETER stop "<|assistant|>"
+
+                       
