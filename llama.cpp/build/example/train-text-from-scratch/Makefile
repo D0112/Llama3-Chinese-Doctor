@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples//CMakeFiles/progress.marks
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples/train-text-from-scratch//CMakeFiles/progress.marks
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/train-text-from-scratch/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/train-text-from-scratch/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,18 +158,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/train-text-from-scratch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/train-text-from-scratch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/rule:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/rule
+.PHONY : examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/rule
+
+# Convenience name for target.
+llama-train-text-from-scratch: examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/rule
+.PHONY : llama-train-text-from-scratch
+
+# fast build rule for target.
+llama-train-text-from-scratch/fast:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/build.make examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/build
+.PHONY : llama-train-text-from-scratch/fast
+
+train-text-from-scratch.o: train-text-from-scratch.cpp.o
+.PHONY : train-text-from-scratch.o
+
+# target to build an object file
+train-text-from-scratch.cpp.o:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/build.make examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/train-text-from-scratch.cpp.o
+.PHONY : train-text-from-scratch.cpp.o
+
+train-text-from-scratch.i: train-text-from-scratch.cpp.i
+.PHONY : train-text-from-scratch.i
+
+# target to preprocess a source file
+train-text-from-scratch.cpp.i:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/build.make examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/train-text-from-scratch.cpp.i
+.PHONY : train-text-from-scratch.cpp.i
+
+train-text-from-scratch.s: train-text-from-scratch.cpp.s
+.PHONY : train-text-from-scratch.s
+
+# target to generate assembly for a file
+train-text-from-scratch.cpp.s:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/build.make examples/train-text-from-scratch/CMakeFiles/llama-train-text-from-scratch.dir/train-text-from-scratch.cpp.s
+.PHONY : train-text-from-scratch.cpp.s
 
 # Help Target
 help:
@@ -184,6 +222,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... llama-train-text-from-scratch"
+	@echo "... train-text-from-scratch.o"
+	@echo "... train-text-from-scratch.i"
+	@echo "... train-text-from-scratch.s"
 .PHONY : help
 
 

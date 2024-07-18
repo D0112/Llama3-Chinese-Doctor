@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples//CMakeFiles/progress.marks
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples/tokenize//CMakeFiles/progress.marks
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/tokenize/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/tokenize/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,18 +158,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/tokenize/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/tokenize/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+examples/tokenize/CMakeFiles/llama-tokenize.dir/rule:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/tokenize/CMakeFiles/llama-tokenize.dir/rule
+.PHONY : examples/tokenize/CMakeFiles/llama-tokenize.dir/rule
+
+# Convenience name for target.
+llama-tokenize: examples/tokenize/CMakeFiles/llama-tokenize.dir/rule
+.PHONY : llama-tokenize
+
+# fast build rule for target.
+llama-tokenize/fast:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/tokenize/CMakeFiles/llama-tokenize.dir/build.make examples/tokenize/CMakeFiles/llama-tokenize.dir/build
+.PHONY : llama-tokenize/fast
+
+tokenize.o: tokenize.cpp.o
+.PHONY : tokenize.o
+
+# target to build an object file
+tokenize.cpp.o:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/tokenize/CMakeFiles/llama-tokenize.dir/build.make examples/tokenize/CMakeFiles/llama-tokenize.dir/tokenize.cpp.o
+.PHONY : tokenize.cpp.o
+
+tokenize.i: tokenize.cpp.i
+.PHONY : tokenize.i
+
+# target to preprocess a source file
+tokenize.cpp.i:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/tokenize/CMakeFiles/llama-tokenize.dir/build.make examples/tokenize/CMakeFiles/llama-tokenize.dir/tokenize.cpp.i
+.PHONY : tokenize.cpp.i
+
+tokenize.s: tokenize.cpp.s
+.PHONY : tokenize.s
+
+# target to generate assembly for a file
+tokenize.cpp.s:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/tokenize/CMakeFiles/llama-tokenize.dir/build.make examples/tokenize/CMakeFiles/llama-tokenize.dir/tokenize.cpp.s
+.PHONY : tokenize.cpp.s
 
 # Help Target
 help:
@@ -184,6 +222,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... llama-tokenize"
+	@echo "... tokenize.o"
+	@echo "... tokenize.i"
+	@echo "... tokenize.s"
 .PHONY : help
 
 

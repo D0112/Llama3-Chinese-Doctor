@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples//CMakeFiles/progress.marks
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples/simple//CMakeFiles/progress.marks
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/simple/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/simple/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,18 +158,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/simple/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/simple/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+examples/simple/CMakeFiles/llama-simple.dir/rule:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/simple/CMakeFiles/llama-simple.dir/rule
+.PHONY : examples/simple/CMakeFiles/llama-simple.dir/rule
+
+# Convenience name for target.
+llama-simple: examples/simple/CMakeFiles/llama-simple.dir/rule
+.PHONY : llama-simple
+
+# fast build rule for target.
+llama-simple/fast:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/simple/CMakeFiles/llama-simple.dir/build.make examples/simple/CMakeFiles/llama-simple.dir/build
+.PHONY : llama-simple/fast
+
+simple.o: simple.cpp.o
+.PHONY : simple.o
+
+# target to build an object file
+simple.cpp.o:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/simple/CMakeFiles/llama-simple.dir/build.make examples/simple/CMakeFiles/llama-simple.dir/simple.cpp.o
+.PHONY : simple.cpp.o
+
+simple.i: simple.cpp.i
+.PHONY : simple.i
+
+# target to preprocess a source file
+simple.cpp.i:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/simple/CMakeFiles/llama-simple.dir/build.make examples/simple/CMakeFiles/llama-simple.dir/simple.cpp.i
+.PHONY : simple.cpp.i
+
+simple.s: simple.cpp.s
+.PHONY : simple.s
+
+# target to generate assembly for a file
+simple.cpp.s:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/simple/CMakeFiles/llama-simple.dir/build.make examples/simple/CMakeFiles/llama-simple.dir/simple.cpp.s
+.PHONY : simple.cpp.s
 
 # Help Target
 help:
@@ -184,6 +222,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... llama-simple"
+	@echo "... simple.o"
+	@echo "... simple.i"
+	@echo "... simple.s"
 .PHONY : help
 
 

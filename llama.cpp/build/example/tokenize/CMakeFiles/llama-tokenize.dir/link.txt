@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/llama-tokenize.dir/tokenize.cpp.o -o ../../bin/llama-tokenize  -Wl,-rpath,/home/adminn/Desktop/llamacpp/llama.cpp/build/src:/home/adminn/Desktop/llamacpp/llama.cpp/build/ggml/src: ../../common/libcommon.a ../../src/libllama.so ../../ggml/src/libggml.so 

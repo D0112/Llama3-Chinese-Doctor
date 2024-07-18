@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples//CMakeFiles/progress.marks
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles /home/adminn/Desktop/llamacpp/llama.cpp/build/examples/speculative//CMakeFiles/progress.marks
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/speculative/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adminn/Desktop/llamacpp/llama.cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/speculative/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,18 +158,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/speculative/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/speculative/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+examples/speculative/CMakeFiles/llama-speculative.dir/rule:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/speculative/CMakeFiles/llama-speculative.dir/rule
+.PHONY : examples/speculative/CMakeFiles/llama-speculative.dir/rule
+
+# Convenience name for target.
+llama-speculative: examples/speculative/CMakeFiles/llama-speculative.dir/rule
+.PHONY : llama-speculative
+
+# fast build rule for target.
+llama-speculative/fast:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/speculative/CMakeFiles/llama-speculative.dir/build.make examples/speculative/CMakeFiles/llama-speculative.dir/build
+.PHONY : llama-speculative/fast
+
+speculative.o: speculative.cpp.o
+.PHONY : speculative.o
+
+# target to build an object file
+speculative.cpp.o:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/speculative/CMakeFiles/llama-speculative.dir/build.make examples/speculative/CMakeFiles/llama-speculative.dir/speculative.cpp.o
+.PHONY : speculative.cpp.o
+
+speculative.i: speculative.cpp.i
+.PHONY : speculative.i
+
+# target to preprocess a source file
+speculative.cpp.i:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/speculative/CMakeFiles/llama-speculative.dir/build.make examples/speculative/CMakeFiles/llama-speculative.dir/speculative.cpp.i
+.PHONY : speculative.cpp.i
+
+speculative.s: speculative.cpp.s
+.PHONY : speculative.s
+
+# target to generate assembly for a file
+speculative.cpp.s:
+	cd /home/adminn/Desktop/llamacpp/llama.cpp/build && $(MAKE) $(MAKESILENT) -f examples/speculative/CMakeFiles/llama-speculative.dir/build.make examples/speculative/CMakeFiles/llama-speculative.dir/speculative.cpp.s
+.PHONY : speculative.cpp.s
 
 # Help Target
 help:
@@ -184,6 +222,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... llama-speculative"
+	@echo "... speculative.o"
+	@echo "... speculative.i"
+	@echo "... speculative.s"
 .PHONY : help
 
 
