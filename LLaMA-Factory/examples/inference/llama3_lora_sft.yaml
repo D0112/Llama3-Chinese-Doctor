@@ -1,0 +1,4 @@
+model_name_or_path: /home/adminn/Desktop/LLAMA3/Llama3-8B-Chinese-Chat
+adapter_name_or_path: /home/adminn/Desktop/LLAMA3/LLaMA-Factory/saves/LLaMA3-8B-Chinese-Chat/lora/train_2024-07-09-17-59-49/checkpoint-84300
+template: llama3
+finetuning_type: lora
