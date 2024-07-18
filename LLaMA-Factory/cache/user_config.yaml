@@ -1,0 +1,5 @@
+cache_dir: null
+lang: zh
+last_model: LLaMA3-8B-Chinese-Chat
+path_dict:
+  LLaMA3-8B-Chinese-Chat: /home/adminn/Desktop/LLAMA3/Llama3-8B-Chinese-Chat
